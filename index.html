@@ -4,7 +4,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>VanguardHSE Solutions</title>
         <link rel="stylesheet" href="style.css">
-         <link rel="icon" href="favicon.ico" type="image/x-icon">
+         <link rel="icon" href="assets/logo.png" type="image/x-icon">
          <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
         <nav>
             <a href="index.html"><img src="assets/logo.png" alt="VanguardHSE Solutions Logo" class="logo"></a>
             <div class="nav-links" id="navLinks">
-    <i class="fa-solid fa-xmark"></i>
+    <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
     <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="pillars.html">Our Pillars</a></li>
@@ -24,11 +24,14 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             </div>
-            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+            <i class="fa-solid fa-bars" id="menuBtn" onclick="showMenu()"></i>
         </nav>
         <div class="text-box">
             <h1>VanguardHSE Solutions</h1>
             <p>Culturally Intelligent. Technologically Advanced. Human-Centred.</p>
+            <br>
+            <p>Vanguard HSE Solutions (Pty) Ltd is a purpose-driven health and safety solutions company committed to transforming workplace safety across Africa through culturally aligned, technology-enabled, and people-centred approaches</p>
+            <br>
             <a href="" class="hero-btn">Explore More</a>
         </div>
         </section>
@@ -59,20 +62,59 @@
 
     <div class="row">
         <div class="services-col">
-            <img src="assets/nick-fewings-4pZu15OeTXA-unsplash.jpg"> <div class="layer">
+            <img src="assets/safety audits.jpg"> <div class="layer">
                 <h3>SAFETY AUDITS</h3>
             </div>
         </div>
 
         <div class="services-col">
-            <img src="assets/igor-omilaev-eGGFZ5X2LnA-unsplash.jpg"> <div class="layer">
+            <img src="assets/vr and ai.jpg"> <div class="layer">
                 <h3>VR & AI TRAINING</h3>
             </div>
         </div>
 
         <div class="services-col">
-            <img src="assets/jeriden-villegas-VLPUm5wP5Z0-unsplash.jpg"> <div class="layer">
+            <img src="assets/esg.jpg"> <div class="layer">
                 <h3>ESG & GOVERNANCE</h3>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="testimonials">
+    <h1>Our Clients Reviews</h1>
+    <p>Read our reviews left by our valued clients about our services</p>
+
+    <div class="row">
+        <div class="testimonials-col">
+            <img src="assets/person.jpg" alt="Client 1">
+            <div>
+                <p>
+                    The service was exceptional. The team handled our project with 
+                    professionalism and delivered exactly what we needed on time.
+                </p>
+                <h3>John Doe</h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+        </div>
+
+        <div class="testimonials-col">
+            <img src="assets/person2.jpg" alt="Client 2">
+            <div>
+                <p>
+                    I highly recommend their services. The attention to detail 
+                    and the innovative approach they took made a huge difference 
+                    for our business growth.
+                </p>
+                <h3>Jane Smith</h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
             </div>
         </div>
     </div>
@@ -81,6 +123,18 @@
     <h1>Transform Your Safety Culture Today</h1>
     <p>Empower your workforce with culturally aligned, <br>technology-driven safety solutions designed for Africa.</p>
     <a href="contact.html" class="hero-btn">WORK WITH US</a>
+</section>
+<section class="footer">
+    <h4>About Us</h4>
+    <p>We are dedicated to providing world-class services and innovative solutions <br> to help our clients achieve their strategic goals across the globe.</p>
+    
+    <div class="icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-x-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+    </div>
+    <p><i class="fa-brands fa-dev"></i></i> by PortechX Tech Solutions <span id="year"></span></p>
 </section>
     <script src="script.js"></script>
     </body>

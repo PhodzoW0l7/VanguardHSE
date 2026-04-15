@@ -3,6 +3,7 @@
     padding:0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 .header {
     min-height: 100vh;
@@ -98,9 +99,13 @@ nav .fa-solid{
     .nav-links ul li{
         display: block;
     }
+    #menuBtn {
+        display: block; 
+        cursor: pointer;
+    }
     .nav-links{
-        position: relative;
-        background: #003775;
+        position: absolute;
+        background: #ec740c93;
         height: 100vh;
         width: 200px;
         top:0;
@@ -119,6 +124,16 @@ nav .fa-solid{
     .nav-links ul{
         display: block;
         text-align: left;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
     }
 }
 .pillars {
@@ -142,15 +157,28 @@ p {
     margin-top: 5%;
     display: flex;
     justify-content: space-between;
+}.pillars {
+    width: 100%; /* Changed from 80% to 100% to make the background span the full width */
+    padding: 100px 10%; /* Moves the 80% width logic into padding */
+    text-align: center;
+    
+    /* The Magic Layering */
+    background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.7)), url('assets/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; /* Optional: adds a parallax scrolling effect */
 }
+
+/* Ensure your cards stand out against the new background */
 .pillar-col {
     flex-basis: 31%;
-    background: #fff3f3; /* You can change this to a light grey or corporate blue tint */
+    background: #fff; /* Solid white background for the cards */
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 12px;
     box-sizing: border-box;
     transition: 0.5s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Subtle shadow so they "float" */
 }
 .pillar-col:hover {
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
@@ -184,6 +212,8 @@ p {
 .services-col img {
     width: 100%;
     display: block;
+    height: 250px; 
+    object-fit: cover;
 }
 .layer {
     background: transparent;
@@ -195,7 +225,7 @@ p {
     transition: 0.5s;
 }
 .layer:hover {
-    background: rgba(191, 30, 46, 0.7); /* Use Vanguard's corporate red here */
+    background: #ec740ca2; 
 }
 .layer h3 {
     width: 100%;
@@ -216,7 +246,7 @@ p {
 .cta {
     margin: 100px auto;
     width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/banner.jpg); /* Use a high-quality industrial or boardroom photo */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0,0,0,0.7)),url(assets/banner.jpg); /* Use a high-quality industrial or boardroom photo */
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -229,10 +259,70 @@ p {
     margin-bottom: 40px;
     padding: 0;
 }
-
-/* Responsive adjustment for mobile */
 @media(max-width: 700px) {
     .cta h1 {
         font-size: 24px;
     }
+}
+.testimonials{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.testimonials-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-top: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonials-col img {
+    width: 130px;         /* Same as height */
+    height: 65px;        /* Same as width */
+    margin-left: 5px;
+    margin-right: 20px;
+    border-radius: 50%;  /* Makes it a circle if W and H are equal */
+    object-fit: cover;   /* CRITICAL: Prevents the "slender" squashing */
+    object-position: center; 
+}
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background: #f1f1f1; /* Light grey to separate from the white sections */
+}
+
+.footer h4 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.footer p {
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.icons .fa-brands {
+    color: #ec740c; 
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    transition: 0.3s;
+}
+
+.icons .fa-brands:hover {
+    color: #003775; 
+    transform: translateY(-3px); 
+}
+
+.fa-heart {
+    color: #ec740c;
 }
