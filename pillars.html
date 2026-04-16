@@ -1,14 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Pillars</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Pillars | Vanguard HSE Solutions</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    
+
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="assets/logo.png" alt="Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pillars.html">Our Pillars</a></li>
+                    <li><a href="insights.html">Insights</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" id="menuBtn" onclick="showMenu()"></i>
+        </nav>
+        <h1>Our Transformation Pillars</h1>
+    </section>
+
+    <section class="pillar-details">
+        <div class="row">
+            <div class="pillar-col-large">
+                <i class="fa-solid fa-earth-africa"></i>
+                <h2>Culturally Intelligent</h2>
+                <p>In the South African and broader African context, safety systems often fail because they ignore local realities. Our first pillar focuses on linguistic diversity and socio-economic context. We don't just translate manuals; we transform safety culture by building ownership from the ground up, ensuring every worker—regardless of literacy level—understands and values their safety.</p>
+            </div>
+            <div class="pillar-col-large">
+                <img src="images/cultural-intel.jpg" alt="Cultural Intelligence">
+            </div>
+        </div>
+
+        <div class="row reverse">
+            <div class="pillar-col-large">
+                <img src="images/tech-advanced.jpg" alt="Tech Innovation">
+            </div>
+            <div class="pillar-col-large">
+                <i class="fa-solid fa-microchip"></i>
+                <h2>Technologically Advanced</h2>
+                <p>We leverage the power of AI and Immersive Tech to predict risks before they become accidents. Our systems utilize real-time data dashboards, VR hazard simulations, and automated reporting. By integrating these tools into daily workflows, we move from reactive safety to proactive prevention.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Redefining workplace health and safety across Africa through innovation and dignity.</p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-dev"></i>
+        </div>
+    <p><i class="fa-brands fa-dev"></i></i> by PortechX Tech Solutions <span id="year"></span></p>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
