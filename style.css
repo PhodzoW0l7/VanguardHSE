@@ -92,6 +92,37 @@ nav img {
 nav .fa-solid{
     display: none;
 }
+/* --- Home Transformation Pillars Styling --- */
+
+h1.home {
+    color: #003775; /* Vanguard Dark Blue for strong branding */
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+p.home {
+    color: #777;
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 800px;
+    margin: auto;
+}
+.home-services h1 {
+    color: #003775;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* --- Pillar Columns Styling --- */
+
+.home-col h3 {
+    color: #003775;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
 @media (max-width: 780px) {
     .text-box h1{
         font-size: 40px;
@@ -145,14 +176,20 @@ nav .fa-solid{
 .pillars h1{
     font-size: 36px;
     font-weight: 600;
-    color: #003775;
     
 }
-p {
-    color: #777;
+.sub-header p {
+    color: #fff;
     font-size: 14px;
     font-weight: 300;
     line-height: 22px;
+    padding: 10px;
+}
+.services-container,.services-container,.pillar-details p {
+    color: #555;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
     padding: 10px;
 }
 .row {
@@ -164,7 +201,7 @@ p {
     padding: 100px 10%; 
     text-align: center;
     
-    background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.7)), url('assets/banner.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.486), rgba(255,255,255,0.7)), url('assets/banner.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed; 
@@ -258,12 +295,11 @@ p {
     color: #fff;
     margin-bottom: 40px;
     padding: 0;
-    color: #003775;
 }
 @media(max-width: 700px) {
     .cta h1 {
         font-size: 24px;
-        color:#003775;
+        
     }
 }
 .testimonials{
@@ -342,12 +378,6 @@ p {
     background: #fff;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
-.accreditations {
-    width: 80%;
-    margin: auto;
-    padding: 60px 0;
-    text-align: center;
-}
 
 .logo-container {
     display: flex;
@@ -382,29 +412,49 @@ p {
         margin-bottom: 20px;
     }
 }
-/* Sub-page Header styling */
+/* Shared sub-page header styling */
 .sub-header {
     height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(assets/banner.jpg);
+    background-image: linear-gradient(rgba(1, 19, 90, 0.7), rgba(107, 64, 0, 0.7)), url(assets/banner.jpg);
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     text-align: center;
     color: #fff;
 }
 
 .sub-header h1 {
     margin-top: 50px;
-    color: #003775;
 }
 
-/* Detailed Pillar Rows */
-.pillar-details {
+/* Shared page section layout */
+.pillar-details,
+.services-container,
+.contact-us,
+.approach,
+.accreditations {
     width: 80%;
     margin: auto;
+}
+
+.pillar-details,
+.contact-us {
     padding: 80px 0;
 }
 
+.services-container,
+.accreditations,
+.approach {
+    padding: 60px 0;
+}
+
+.approach,
+.accreditations {
+    text-align: center;
+}
+
+/* Detailed Pillar Rows */
 .pillar-col-large {
     flex-basis: 48%;
     padding: 30px 2px;
@@ -430,18 +480,12 @@ p {
         flex-direction: column; /* Stacks normally on mobile */
     }
 }
-/* Unique background for Insights page header */
-.insights-bg {
-    background-image: linear-gradient(rgba(0,55,117,0.8), rgba(0,55,117,0.8)), url('images/insights-banner.jpg');
+/* Unique background for services page header */
+.services-bg {
+    background-image: linear-gradient(rgba(1, 19, 90, 0.7), rgba(107, 64, 0, 0.7)), url('assets/banner.jpg');
 }
 
-.insights-container {
-    width: 80%;
-    margin: auto;
-    padding: 60px 0;
-}
-
-.insights-left {
+.services-left {
     flex-basis: 65%;
 }
 
@@ -474,7 +518,7 @@ p {
 }
 
 /* Sidebar Styling */
-.insights-right {
+.services-right {
     flex-basis: 30%;
 }
 
@@ -513,12 +557,10 @@ p {
 }
 /* About Page Specifics */
 .about-bg {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/banner.jpg');
+    background-image: linear-gradient(rgba(1, 19, 90, 0.7), rgba(107, 64, 0, 0.7)), url('assets/banner.jpg');
 }
 
 .about-us {
-    width: 80%;
-    margin: auto;
     padding-top: 80px;
     padding-bottom: 50px;
 }
@@ -536,7 +578,19 @@ p {
 
 .about-col h1 {
     padding-top: 0;
-    color: #003775;
+    color: #ec740c;
+}
+.about-us,.vision-col p{
+    color: #555;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+.approach-col p {
+    color: #555;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26px;
 }
 
 /* Vision & Mission Boxes */
@@ -559,13 +613,6 @@ p {
 }
 
 /* Approach Styling */
-.approach {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding: 60px 0;
-}
-
 .approach-col {
     flex-basis: 31%;
     border-radius: 10px;
@@ -583,17 +630,11 @@ p {
 .approach-col i {
     font-size: 30px;
     margin-bottom: 15px;
-    color: #003775; /* Vanguard Dark Blue */
+    color: #007514; /* Vanguard Dark Blue */
 }
 /* Contact Page Styling */
 .contact-bg {
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/contact-banner.jpg');
-}
-
-.contact-us {
-    width: 80%;
-    margin: auto;
-    padding: 80px 0;
+    background-image: linear-gradient(rgba(1, 19, 90, 0.7), rgba(107, 64, 0, 0.7)), url('assets/banner.jpg');
 }
 
 .contact-col {
