@@ -1,0 +1,662 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(1, 19, 90, 0.7), rgba(107, 64, 0, 0.7)), url("assets/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 200px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 6px 12px;
+    position: relative;
+    padding-bottom:30px;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #fff; /* optional depending on background */
+    font-size: 16px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #EC750C;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 62px;
+}
+.text-box p{
+    margin: 10px auto;
+    font-size: 14px;
+    color: #fff;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+.hero-btn:hover{
+    background: #EC750C;
+    color: #fff;
+    border: 1px solid #EC750C;
+}
+nav .fa-solid{
+    display: none;
+}
+@media (max-width: 780px) {
+    .text-box h1{
+        font-size: 40px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    #menuBtn {
+        display: block; 
+        cursor: pointer;
+    }
+    .nav-links{
+        position: absolute;
+        background: #ec740c93;
+        height: 100vh;
+        width: 200px;
+        top:0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 0.5s;
+    }
+    nav .fa-solid{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        display: block;
+        text-align: left;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+.pillars {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.pillars h1{
+    font-size: 36px;
+    font-weight: 600;
+    
+}
+.sub-header p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.services-container,.services-container,.pillar-details p {
+    color: #555;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    padding: 10px;
+}
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}.pillars {
+    width: 100%; 
+    padding: 100px 10%; 
+    text-align: center;
+    
+    background-image: linear-gradient(rgba(0, 0, 0, 0.486), rgba(255,255,255,0.7)), url('assets/banner.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+.pillar-col {
+    flex-basis: 31%;
+    background: #fff; 
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+}
+.pillar-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+.pillar-col h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+@media(max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+    .pillar-col {
+        flex-basis: 100%;
+    }
+}
+.services {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.services-col {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.services-col img {
+    width: 100%;
+    display: block;
+    height: 250px; 
+    object-fit: cover;
+}
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer:hover {
+    background: #ec740ca2; 
+}
+.layer h3 {
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+.cta {
+    margin: 100px auto;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0,0,0,0.7)),url(assets/banner.jpg); /* Use a high-quality industrial or boardroom photo */
+    background-position: center;
+    background-size: cover;
+    border-radius: 0px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta h1 {
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+@media(max-width: 700px) {
+    .cta h1 {
+        font-size: 24px;
+        
+    }
+}
+.testimonials{
+    width: 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+}
+.testimonials-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-top: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonials-col img {
+    width: 130px;         /* Same as height */
+    height: 65px;        /* Same as width */
+    margin-left: 5px;
+    margin-right: 20px;
+    border-radius: 50%;  /* Makes it a circle if W and H are equal */
+    object-fit: cover;   /* CRITICAL: Prevents the "slender" squashing */
+    object-position: center; 
+}
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background: #f1f1f1; /* Light grey to separate from the white sections */
+}
+
+.footer h4 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.footer p {
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.icons .fa-brands {
+    color: #ec740c; 
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+    transition: 0.3s;
+}
+
+.icons .fa-brands:hover {
+    color: #003775; 
+    transform: translateY(-3px); 
+}
+
+.fa-heart {
+    color: #ec740c;
+}
+.bg-overlay-section {
+    width: 100%;
+    padding: 80px 10% 60px; 
+    background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.582)), url('assets/background2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; /* Parallax effect */
+    text-align: center;
+}
+.bg-overlay-section .pillar-col, 
+.bg-overlay-section .testimonials-col {
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.logo-item {
+    flex-basis: 18%; /* Fits 5 logos per row */
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.logo-item img {
+    width: 100%;
+    max-width: 150px; /* Prevents logos from getting too big */
+    /* filter: grayscale(100%); Makes all logos grey for a clean look */
+    /* opacity: 0.6; */
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.logo-item img:hover {
+    transform: scale(1.1); 
+}
+
+@media (max-width: 768px) {
+    .logo-item {
+        flex-basis: 45%; 
+        margin-bottom: 20px;
+    }
+}
+/* Shared sub-page header styling */
+.sub-header {
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(1, 19, 90, 0.7), rgba(107, 64, 0, 0.7)), url(assets/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #fff;
+}
+
+.sub-header h1 {
+    margin-top: 50px;
+}
+
+/* Shared page section layout */
+.pillar-details,
+.services-container,
+.contact-us,
+.approach,
+.accreditations {
+    width: 80%;
+    margin: auto;
+}
+
+.pillar-details,
+.contact-us {
+    padding: 80px 0;
+}
+
+.services-container,
+.accreditations,
+.approach {
+    padding: 60px 0;
+}
+
+.approach,
+.accreditations {
+    text-align: center;
+}
+
+/* Detailed Pillar Rows */
+.pillar-col-large {
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.pillar-col-large img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.pillar-col-large i {
+    font-size: 40px;
+    color: #ec740c;
+    margin-bottom: 20px;
+}
+
+.reverse {
+    flex-direction: row-reverse; /* Flips the image and text for a zigzag look */
+}
+
+@media (max-width: 768px) {
+    .reverse {
+        flex-direction: column; /* Stacks normally on mobile */
+    }
+}
+/* Unique background for services page header */
+.services-bg {
+    background-image: linear-gradient(rgba(1, 19, 90, 0.7), rgba(107, 64, 0, 0.7)), url('assets/banner.jpg');
+}
+
+.services-left {
+    flex-basis: 65%;
+}
+
+.blog-post {
+    margin-bottom: 50px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+}
+
+.blog-post img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.blog-post h2 {
+    margin: 20px 0 10px;
+    color: #003775;
+}
+
+.post-meta {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #777;
+}
+
+.post-meta span {
+    margin-right: 20px;
+}
+
+/* Sidebar Styling */
+.services-right {
+    flex-basis: 30%;
+}
+
+.sidebar-card {
+    background: #fdfdfd;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.sidebar-card h3 {
+    background: #ec740c;
+    color: #fff;
+    padding: 7px 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+.sidebar-card div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #555;
+    padding: 5px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.newsletter input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    outline: none;
+}
+/* About Page Specifics */
+.about-bg {
+    background-image: linear-gradient(rgba(1, 19, 90, 0.7), rgba(107, 64, 0, 0.7)), url('assets/banner.jpg');
+}
+
+.about-us {
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-col {
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-col img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
+}
+
+.about-col h1 {
+    padding-top: 0;
+    color: #ec740c;
+}
+.about-us,.vision-col p{
+    color: #555;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+.approach-col p {
+    color: #555;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+/* Vision & Mission Boxes */
+.vision-mission .row {
+    justify-content: space-around;
+}
+
+.vision-col {
+    flex-basis: 40%;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 5%;
+}
+
+.vision-col i {
+    font-size: 35px;
+    color: #ec740c; /* Vanguard Orange */
+    margin-bottom: 15px;
+}
+
+/* Approach Styling */
+.approach-col {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: center;
+    padding: 20px;
+    background: #fff3f3;
+    transition: 0.5s;
+}
+
+.approach-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+.approach-col i {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #007514; /* Vanguard Dark Blue */
+}
+/* Contact Page Styling */
+.contact-bg {
+    background-image: linear-gradient(rgba(1, 19, 90, 0.7), rgba(107, 64, 0, 0.7)), url('assets/banner.jpg');
+}
+
+.contact-col {
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+
+.contact-col div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-col div .fa-solid {
+    font-size: 28px;
+    color: #ec740c;
+    margin: 10px;
+    margin-right: 30px;
+}
+
+.contact-col div p {
+    padding: 0;
+}
+
+.contact-col div h5 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+
+/* Form Styling */
+.contact-col input, .contact-col textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background: #f8f9fa;
+}
+
+.contact-col textarea {
+    resize: none; /* Keeps the look clean */
+}
+
+.red-btn {
+    border: 1px solid #ec740c;
+    background: transparent;
+    color: #ec740c !important;
+}
+
+.red-btn:hover {
+    color: #fff !important;
+    background: #ec740c;
+}
