@@ -8,7 +8,7 @@ Vanguard HSE Solutions (Pty) Ltd is a purpose-driven health and safety solutions
 
 ## 🚀 Live Preview
 The website is automatically deployed using GitHub Pages. You can view the live website here:
-👉 **[Vanguard HSE Solutions Live Site](https://github.io)**
+👉 **[Vanguard HSE Solutions Live Site](https://github.io](https://phodzow0l7.github.io/VanguardHSE/))**
 
 ---
 
